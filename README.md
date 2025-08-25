@@ -1,21 +1,24 @@
-# Automatic-License-Plate-Recognition-ALPR-on-Raspberry-Pi
-Lightweight Automatic License Plate Recognition (ALPR) system for Raspberry Pi and PC. Uses YOLOv8 (ONNX) for plate detection + EasyOCR for recognition. Supports images, video, RTSP streams, JSON/multipart webhook output, and customizable settings via .env.
+# Automatic License Plate Recognition (ALPR)
 
-# ALPR on Raspberry Pi (and PC)
-Lightweight open-source ALPR pipeline based on **YOLOv8 (ONNX)** for plate detection + **EasyOCR** for text recognition.  
-Supports single image, video/RTSP, and webhook delivery (JSON + images).
+Lightweight open-source ALPR system that works on **Raspberry Pi** and standard PCs.  
+Uses **YOLOv8 (ONNX)** for license plate detection and **EasyOCR** for character recognition.
 
-## Features
-- YOLOv8 (ONNXRuntime) plate detection (CPU/GPU fallback)
-- EasyOCR recognition with light preprocessing
-- Config via `.env` (no code changes)
-- Optional: de-duplication, temporal voting
-- Webhook: JSON only or multipart (frame/plate/detect images)
+## ✨ Features
+- 📸 Supports images, video files, RTSP streams, and webcams  
+- ⚡ Lightweight, runs on CPU (GPU optional)  
+- 🔧 Configurable via `.env` file  
+- 📤 Webhook support (JSON or multipart with plate & frame images)  
+- 🛡️ Unique plate filtering (avoid duplicates within TTL)  
+- 💾 Local saving of frames, crops, and JSON payloads in `out/`
 
-## Quick Start
+## 🚀 Quick Start
+
 ```bash
-git clone https://github.com/<your-user>/alpr-pi.git
-cd alpr-pi
-python -m venv .venv && source .venv/bin/activate   # on Windows: .venv\Scripts\activate
+# Clone repo
+git clone https://github.com/prodit/plate_recognition.git
+cd plate_recognition
+
+# Install dependencies
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
-cp .env.example .env   # set your values

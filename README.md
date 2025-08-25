@@ -81,4 +81,5 @@ Example payload:
 🔧 Built for lightweight real-time ALPR on edge devices.
 Perfect as a starting point for IoT projects, parking systems, or smart surveillance.
 
-
+## 📜 License
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.

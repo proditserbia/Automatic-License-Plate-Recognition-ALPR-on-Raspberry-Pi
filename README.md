@@ -18,7 +18,7 @@ Uses **YOLOv8 (ONNX)** for license plate detection and **EasyOCR** for character
 git clone https://github.com/prodit/plate_recognition.git
 cd plate_recognition
 
-**# Install dependencies**
+# Install dependencies
 python -m venv venv
 source venv/bin/activate   # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
